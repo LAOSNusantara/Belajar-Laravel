@@ -9,6 +9,15 @@ use Illuminate\Http\Request;
 class PostinganController extends Controller
 {
 
+
+    /**
+     * PostinganController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $postingan = Postingan::all();

@@ -25,3 +25,7 @@ Route::get('/kategori/{id}/del', 'KategoriController@destroy');
 Route::get('/postingan', 'PostinganController@index');
 Route::get('/postingan/create', 'PostinganController@create');
 Route::post('/postingan', 'PostinganController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
